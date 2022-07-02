@@ -11,7 +11,7 @@ jobs:
     - name: Check Out 
       uses: actions/checkout@v2
 
-    -name: compress function files or director to zip file
+    - name: compress function files or director to zip file
       run: zip -j index-py.zip ./python-sample/index.py
 
     - name: deploy compress zip function file to huaweicloud functiongraph
