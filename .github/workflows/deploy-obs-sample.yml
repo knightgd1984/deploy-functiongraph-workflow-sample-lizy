@@ -1,4 +1,4 @@
-name: "commit-master-obs2"
+name: "commit-master-obs"
 
 on:
   push:
