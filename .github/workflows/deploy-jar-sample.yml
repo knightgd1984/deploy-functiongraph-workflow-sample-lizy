@@ -20,7 +20,7 @@ jobs:
           # 完成java项目打包
       - name: build maven project
         run: |
-          cd java-sample
+          cd java-sample/functionj
           mvn clean -U package -Dmaven.test.skip
 
       - name: deploy java jar to huaweicloud functiongraph
