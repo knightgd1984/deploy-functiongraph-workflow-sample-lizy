@@ -28,10 +28,9 @@ jobs:
       with:
         access_key: ${{ secrets.ACCESSKEY }}
         secret_key: ${{ secrets.SECRETACCESSKEY }}
-        region: ${{ env.REGIONID }}
-        bucket_name: bucket-test
+        bucket_name: obs-lizy20220702
         operation_type: upload
-        local_file_path: target/functionj.jar
+        local_file_path: target/func-lizy2_latest.zip
         obs_file_path: function/functionj/v1.0.0.1/    
 
     #通过OBS部署函数
@@ -40,8 +39,8 @@ jobs:
       with:
         ak: ${{ secrets.ACCESSKEY }}
         sk: ${{ secrets.SECRETACCESSKEY }}
-        endpoint: ${endpint}
-        project_id: ${projectid}
+        endpoint: functiongraph.cn-north-4.myhuaweicloud.com
+        project_id: 086cd4ee9e00268e2f76c00ea33b6cbe
         function_codetype: obs
-        function_urn: ${function_urn}
-        function_file: https://bucket-test.${obs-endpoint}/function/functionj/v1.0.0.1/functionj.jar
+        function_urn: urn:fss:cn-north-4:086cd4ee9e00268e2f76c00ea33b6cbe:function:default:func-lizy2:latest
+        function_file: https://bucket-test.obs.cn-north-4.myhuaweicloud.com/function/functionj/v1.0.0.1/func-lizy2_latest.zip
