@@ -1,9 +1,9 @@
-name: "commit-master"
+name: "commit-master-zip"
 
 on:
   push:
     branches: 
-    - 'develop'
+    - 'master'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,8 +19,8 @@ jobs:
       with:
         ak: ${{ secrets.ACCESSKEY }}
         sk: ${{ secrets.SECRETACCESSKEY }}
-        endpoint: ${endpint}
-        project_id: ${projectid}
+        endpoint: functiongraph.cn-north-4.myhuaweicloud.com
+        project_id: 086cd4ee9e00268e2f76c00ea33b6cbe
         function_codetype: zip
-        function_urn: ${function_urn}
+        function_urn: urn:fss:cn-north-4:086cd4ee9e00268e2f76c00ea33b6cbe:function:default:func-dir2:latest
         function_file: ./index-py.zip
